@@ -11,9 +11,9 @@ class PublicHoliday(models.Model):
         unique_together = ('country', 'date', 'local_name')
 
     def __str__(self) -> str:
-        return "[%s] %s (%s) [%s]" % (
+        return "[%s | %s] %s (%s)" % (
+            self.country.name,
             str(self.date),
             self.name,
-            self.local_name,
-            self.country.name
+            self.local_name
         )
