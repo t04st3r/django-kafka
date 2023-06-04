@@ -29,10 +29,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+PUBLIC_HOLDAY_API_URL = "https://date.nager.at/api/v3"
 
 # Application definition
 
 INSTALLED_APPS = [
+    'public_holiday.apps.PublicHolidayConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
