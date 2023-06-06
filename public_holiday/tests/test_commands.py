@@ -36,14 +36,21 @@ class TestPopulateModelsCommand:
 
     @mock.patch("requests.get")
     def test_populate_commands_exception(self, fake_get):
-        data = open("public_holiday/tests/fixtures.json").read()
         fake_get.side_effect = Exception("Network Error")
         with pytest.raises(Exception) as e_info:
-            result = self.call_command()
-            assert str(e_info.value()) == "Network Error"
-            assert result == "Error while fetching Public Holiday API [Network Error]"
+            self.call_command()
+        assert str(e_info.value) == "Error while fetching Public Holiday API [Network Error]"
         ph_set = PublicHoliday.objects.all()
         assert len(ph_set) == 0
+
+    @mock.patch("requests.get")
+    def test_populate_commands_server_errror(self, fake_get):
+        fake_get.side_effect = [MockResponse("", 500,  error="Server Error")]
+        with pytest.raises(Exception) as e_info:
+            self.call_command()
+        assert str(e_info.value) == "Error while fetching Public Holiday API [Server Error]"
+        ph_set = PublicHoliday.objects.all()
+        assert len(ph_set) == 0        
 
     @mock.patch("requests.get")
     @mock.patch("random.choice")

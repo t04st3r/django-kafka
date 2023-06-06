@@ -18,19 +18,20 @@ def Object(**kwargs):
 class MockResponse:
     headers = {"Content-Type": "application/json"}
 
-    def __init__(self, data, status_code, url=None):
+    def __init__(self, data, status_code, url=None, error="MockResponseError"):
         self.status_code = status_code
         self.data = data
         self.content = data.encode()
         self.url = url
         self.request = Object(url=url)
+        self.error = error
 
     def json(self):
         return json.loads(self.data)
 
     def raise_for_status(self):
         if self.status_code >= 400:
-            raise requests.HTTPError
+            raise requests.HTTPError(self.error)
 
 class PublicHolidayFactory(factory.django.DjangoModelFactory):
     country = factory.LazyFunction(_get_random_country)
