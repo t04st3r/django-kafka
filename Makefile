@@ -19,3 +19,6 @@ install-dev:
 
 test:
 	pytest
+
+run-dev:
+	python manage.py runserver	

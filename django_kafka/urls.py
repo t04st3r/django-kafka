@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from public_holiday import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('producer/', views.producer, name='producer')
 ]
