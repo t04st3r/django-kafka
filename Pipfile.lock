@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "eb842dd845c283326c736c413e99e5b45ba404225060505b2c4d68245b69702f"
+            "sha256": "02d60cc5f88853e3d7b4b2040c11a1a0ddcd00565ef75d5a25a613e3e2a924f7"
         },
         "pipfile-spec": 6,
         "requires": {},
@@ -127,6 +127,14 @@
             "index": "pypi",
             "version": "==7.5.1"
         },
+        "djangorestframework": {
+            "hashes": [
+                "sha256:579a333e6256b09489cbe0a067e66abe55c6595d8926be6b99423786334350c8",
+                "sha256:eb63f58c9f218e1a7d064d17a70751f528ed4e1d35547fdade9aaf4cd103fd08"
+            ],
+            "index": "pypi",
+            "version": "==3.14.0"
+        },
         "idna": {
             "hashes": [
                 "sha256:814f528e8dead7d329833b91c5faa87d60bf71824cd12a7530b5526063d02cb4",
@@ -135,6 +143,14 @@
             "markers": "python_version >= '3.5'",
             "version": "==3.4"
         },
+        "kafka-python": {
+            "hashes": [
+                "sha256:04dfe7fea2b63726cd6f3e79a2d86e709d608d74406638c5da33a01d45a9d7e3",
+                "sha256:2d92418c7cb1c298fa6c7f0fb3519b520d0d7526ac6cb7ae2a4fc65a51a94b6e"
+            ],
+            "index": "pypi",
+            "version": "==2.0.2"
+        },
         "psycopg": {
             "hashes": [
                 "sha256:ab400f207a8c120bafdd8077916d8f6c0106e809401378708485b016508c30c9",
@@ -142,6 +158,13 @@
             ],
             "index": "pypi",
             "version": "==3.1.9"
+        },
+        "pytz": {
+            "hashes": [
+                "sha256:1d8ce29db189191fb55338ee6d0387d82ab59f3d00eac103412d64e0ebd0c588",
+                "sha256:a151b3abb88eda1d4e34a9814df37de2a80e301e68ba0fd856fb9b46bfbbbffb"
+            ],
+            "version": "==2023.3"
         },
         "requests": {
             "hashes": [

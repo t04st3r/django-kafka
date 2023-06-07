@@ -1,18 +1,44 @@
 version: "3.9"
 services:
+  django:
+    env_file:
+      .env.example
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: "migrate test"
   postgres:
     image: "postgres:latest"
     restart: on-failure
-    environment:
-      - POSTGRES_USER
-      - POSTGRES_PASSWORD
-      - POSTGRES_DB
-      - POSTGRES_HOST
-      - POSTGRES_PORT
+    env_file:
+      .env.example
     ports:
-      - "5432:5432"  
+      - "5432:5432"
+    healthcheck:
+          test: ["CMD-SHELL", "pg_isready -U postgres"]
+          interval: 5s
+          timeout: 5s
+          retries: 5     
   redis:
     image: "redis:latest"
     restart: on-failure
     ports:
       - "6379:6379"
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    env_file:
+      .env.example
+    ports:
+      - 22181:2181
+  
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    depends_on:
+      - zookeeper
+    ports:
+      - 29092:29092
+    env_file:
+          .env.example
