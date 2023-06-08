@@ -11,6 +11,9 @@ collectstatic:
 populate-models:
 	python manage.py populate_models
 
+consume-records:
+	python -u manage.py consume_records	
+
 install:
 	pip install -r requirements.txt
 
