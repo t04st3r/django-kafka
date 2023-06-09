@@ -1,3 +1,8 @@
+[![CircleCI](https://circleci.com/gh/t04st3r/django-kafka.svg?style=shield&circle-token=be67798024493e48b415f3a0bc175f723d8a5825)](https://app.circleci.com/pipelines/github/t04st3r/django-kafka)
+
+[![python](https://img.shields.io/badge/Python-3.11-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
+
+
 # Django-Kafka
 This is a sample project on how to use Django with Apache Kafka to produce and consume streaming events.
 
@@ -10,6 +15,8 @@ up and running, to do so clone the project, enter in the project folder and hit:
 ```bash
 docker compose up postgres redis kafka zookeeper
 ```
+
+be67798024493e48b415f3a0bc175f723d8a5825
 
 ### Install django deps and run django server
 inside the project folder make user you use python 3.11.3
