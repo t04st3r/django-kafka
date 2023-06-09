@@ -11,9 +11,11 @@ jobs:
     resource_class: medium
     steps:
       - checkout
+      - setup_remote_docker:
+          version: 20.10.18
+          docker_layer_caching: true
       - run:
           name: Run tests
-          # This assumes pytest is installed via the install-package step above
           command: docker compose run django test
 
 # Invoke jobs via workflows
