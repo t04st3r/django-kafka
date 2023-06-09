@@ -8,6 +8,7 @@ from rest_framework.test import APIClient
 from unittest import mock
 from .factories import PublicHolidayFactory
 
+# Generic class to create objects with attributes passed as dict in kwargs
 class Bunch:
     def __init__(self, **kwds):
         self.__dict__.update(kwds)
