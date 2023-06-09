@@ -1,0 +1,1 @@
+This is a sample project on how to use Django with Apache Kafka to produce and consume streaming events
