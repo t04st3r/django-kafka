@@ -16,8 +16,6 @@ up and running, to do so clone the project, enter in the project folder and hit:
 docker compose up postgres redis kafka zookeeper
 ```
 
-be67798024493e48b415f3a0bc175f723d8a5825
-
 ### Install django deps and run django server
 inside the project folder make user you use python 3.11.3
 ```bash
