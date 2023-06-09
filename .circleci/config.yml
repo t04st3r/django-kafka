@@ -13,9 +13,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install docker
-          command: sudo apt insall docker
-      - run:
           name: Run tests
           command: docker compose run django test
 
