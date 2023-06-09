@@ -14,6 +14,8 @@ services:
       kafka:
         condition: service_healthy
     command: "migrate test"
+    volumes:
+      - .:/app
   postgres:
     image: "postgres:latest"
     restart: on-failure
