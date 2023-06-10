@@ -15,7 +15,7 @@ docker compose up postgres redis kafka zookeeper
 ```
 
 ### Install django deps and run django server
-inside the project folder make user you use python 3.11.3
+inside the project folder make sure you use python 3.11.3
 ```bash
 python --version
 ```
