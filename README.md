@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/t04st3r/django-kafka.svg?style=shield&circle-token=be67798024493e48b415f3a0bc175f723d8a5825)](https://app.circleci.com/pipelines/github/t04st3r/django-kafka) [![python](https://img.shields.io/badge/Python-3.11-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
+[![CircleCI](https://circleci.com/gh/t04st3r/django-kafka.svg?style=shield)](https://app.circleci.com/pipelines/github/t04st3r/django-kafka) [![python](https://img.shields.io/badge/Python-3.11-3776AB.svg?style=flat&logo=python&logoColor=white)](https://www.python.org)
 
 
 # Django-Kafka
